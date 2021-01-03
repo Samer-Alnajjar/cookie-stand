@@ -5,10 +5,12 @@ body {
 
 nav {
   background-color: white;
+  text-align: center;
 }
 
 #logo {
   width: 150px;
+  height: 100px;
 }
 
 #store {
@@ -23,16 +25,23 @@ nav {
   height: 75px;
 }
 
-.data {
+main, .intro {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
   font-family: Arial, sans-serif;
-  color: aqua;
 }
 
-.text {
+section {
   font-family: serif, Georgia;
-  color: aquamarine;
+  text-align: center;
+  background-color: rgb(75, 74, 74);
+  color: white;
 }
 
-.custom {
-  font-family: 'Yellowtail', cursive;
+#footer,
+.push {
+  width: 100%;
 }

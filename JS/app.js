@@ -63,7 +63,7 @@ tokyo.results[1] = parseInt(numberOfCookiesSoldPerHour(tokyo.avgNoOfCookiesPerCu
 creatingUl(tokyo);
 
 var dubai = document.createElement("h1");
-dubai.textContent = "dubai";
+dubai.textContent = "Dubai";
 
 body.append(dubai);
 
@@ -83,7 +83,7 @@ dubai.results[1] = parseInt(numberOfCookiesSoldPerHour(dubai.avgNoOfCookiesPerCu
 creatingUl(dubai);
 
 var paris = document.createElement("h1");
-paris.textContent = "paris";
+paris.textContent = "Paris";
 
 body.append(paris);
 
@@ -103,7 +103,7 @@ paris.results[1] = parseInt(numberOfCookiesSoldPerHour(paris.avgNoOfCookiesPerCu
 creatingUl(paris);
 
 var lima = document.createElement("h1");
-lima.textContent = "lima";
+lima.textContent = "Lima";
 
 body.append(lima);
 
@@ -142,7 +142,7 @@ function creatingUl(location) {
     }
 }
 var li = document.createElement("li");
-    li.textContent = "Total: "+ location.results[1]
+    li.textContent = "Total: "+ location.results[1] + " cookies"
     ul.append(li)
 }
 

@@ -1,0 +1,45 @@
+body {
+  background-color: aqua;
+  margin: 0;
+}
+
+nav {
+  background-color: white;
+}
+
+#logo {
+  width: 150px;
+}
+
+#store {
+  margin-left: 450px; 
+  font-family: 'Yellowtail', cursive;
+  font-size: 50px;
+}
+
+#sales {
+  margin-left: 450px;
+  width: 75px;
+  height: 75px;
+}
+
+main, .intro {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  font-family: serif, Georgia;
+  text-align: center;
+  background-color: rgb(75, 74, 74);
+  color: white;
+}
+
+#footer,
+.push {
+  width: 100%;
+}
