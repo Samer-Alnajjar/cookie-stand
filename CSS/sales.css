@@ -45,3 +45,8 @@ section {
 .push {
   width: 100%;
 }
+
+table, td, th {
+  border: solid black 3px;
+  border-collapse: collapse;
+}

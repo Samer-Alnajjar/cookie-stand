@@ -121,8 +121,170 @@ function creatingUl(location) {
       ul.append(li);
     }
 }
-var li = document.createElement("li");
-    li.textContent = "Total: "+ location.results[1] + " cookies"
-    ul.append(li)
+  var li = document.createElement("li");
+  li.textContent = "Total: "+ location.results[1] + " cookies"
+  ul.append(li)
 }
 
+//Creating a table
+
+var hr = document.createElement("hr");
+body.appendChild(hr);
+
+var table = document.createElement("table");
+body.appendChild(table);
+
+function timeRow() {
+  var tableRow = document.createElement("tr");
+  table.appendChild(tableRow);
+
+  var header = document.createElement("th");
+  header.textContent = "";
+  tableRow.appendChild(header);
+
+    for(let i = 0; i < 14; i++) {
+      if(i+6 < 12) {
+        var headerFirst = document.createElement("th");
+        headerFirst.textContent = i+6+":00am";
+        tableRow.appendChild(headerFirst);
+      }else if(i+6 === 12) {
+        var headerFirst = document.createElement("th");
+        headerFirst.textContent = i+6+":00pm";
+        tableRow.appendChild(headerFirst);
+      }else if(i+6 > 12) {
+        var headerFirst = document.createElement("th");
+        headerFirst.textContent = i-6+":00pm";
+        tableRow.appendChild(headerFirst);
+      }
+    }
+    var header = document.createElement("th");
+  header.textContent = "Daily Location Total";
+  tableRow.appendChild(header);
+  }
+
+  timeRow();
+
+  function seattleRow() {
+    var tableRow = document.createElement("tr");
+    table.appendChild(tableRow);
+
+    var header = document.createElement("th");
+    header.textContent = "Seattle";
+    tableRow.appendChild(header);
+
+    for(let i = 0; i < 14; i++) {
+      var td = document.createElement("td");
+      td.textContent = seattle.results[0][i];
+      tableRow.appendChild(td);
+    }
+    var td = document.createElement("td");
+    td.textContent = seattle.results[1];
+    tableRow.appendChild(td);
+  }
+
+  seattleRow();
+
+  function tokyoRow() {
+    var tableRow = document.createElement("tr");
+    table.appendChild(tableRow);
+
+    var header = document.createElement("th");
+    header.textContent = "Tokyo";
+    tableRow.appendChild(header);
+
+    for(let i = 0; i < 14; i++) {
+      var td = document.createElement("td");
+      td.textContent = tokyo.results[0][i];
+      tableRow.appendChild(td);
+    }
+    var td = document.createElement("td");
+    td.textContent = tokyo.results[1];
+    tableRow.appendChild(td);
+  }
+
+  tokyoRow();
+
+  function dubaiRow() {
+    var tableRow = document.createElement("tr");
+    table.appendChild(tableRow);
+
+    var header = document.createElement("th");
+    header.textContent = "Dubai";
+    tableRow.appendChild(header);
+
+    for(let i = 0; i < 14; i++) {
+      var td = document.createElement("td");
+      td.textContent = dubai.results[0][i];
+      tableRow.appendChild(td);
+    }
+    var td = document.createElement("td");
+    td.textContent = dubai.results[1];
+    tableRow.appendChild(td);
+  }
+
+  dubaiRow();
+
+  function parisRow() {
+    var tableRow = document.createElement("tr");
+    table.appendChild(tableRow);
+
+    var header = document.createElement("th");
+    header.textContent = "Paris";
+    tableRow.appendChild(header);
+
+    for(let i = 0; i < 14; i++) {
+      var td = document.createElement("td");
+      td.textContent = paris.results[0][i];
+      tableRow.appendChild(td);
+    }
+    var td = document.createElement("td");
+    td.textContent = paris.results[1];
+    tableRow.appendChild(td);
+  }
+
+  parisRow();
+
+  function limaRow() {
+    var tableRow = document.createElement("tr");
+    table.appendChild(tableRow);
+
+    var header = document.createElement("th");
+    header.textContent = "Lima";
+    tableRow.appendChild(header);
+
+    for(let i = 0; i < 14; i++) {
+      var td = document.createElement("td");
+      td.textContent = lima.results[0][i];
+      tableRow.appendChild(td);
+    }
+    var td = document.createElement("td");
+    td.textContent = lima.results[1];
+    tableRow.appendChild(td);
+  }
+
+  limaRow();
+
+  function totalsRow() {
+    var tableRow = document.createElement("tr");
+    table.appendChild(tableRow);
+
+    var header = document.createElement("th");
+    header.textContent = "Totals";
+    tableRow.appendChild(header);
+
+    var sum = 0;
+    var totalForAllLocations = 0;
+
+    for(let i = 0; i < 14; i++) {
+      var td = document.createElement("td");
+      sum = seattle.results[0][i] + tokyo.results[0][i] + dubai.results[0][i] + paris.results[0][i] + lima.results[0][i]; 
+      td.textContent = sum;
+      tableRow.appendChild(td);
+      totalForAllLocations += sum;
+    }
+    var td = document.createElement("td");
+    td.textContent = totalForAllLocations;
+    tableRow.appendChild(td);
+  }
+
+  totalsRow();
