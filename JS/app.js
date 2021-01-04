@@ -28,17 +28,22 @@ function numberOfCookiesSoldPerHour (avgNoOfCookiesPerCustomer, min, max) {
   return [arrayOfHours, sum];
 }
 
+//Declaring the constructor
 
-var seattle = {
-  minNoOfCustomer: 23,
-  maxNoOfCustomer: 65,
-  avgNoOfCookiesPerCustomer: 6.3,
-  results: []
-} 
-seattle.results.push(numberOfCookiesSoldPerHour(seattle.avgNoOfCookiesPerCustomer, seattle.minNoOfCustomer, seattle.maxNoOfCustomer)[0]);
-seattle.results[1] = parseInt(numberOfCookiesSoldPerHour(seattle.avgNoOfCookiesPerCustomer, seattle.minNoOfCustomer, seattle.maxNoOfCustomer)[1])
-console.log(seattle.results[0]);
-// console.log(seattle.results[1]); //To find the sum
+function Location(passedName, passedMin, passedMax, passedAvg) {
+  this.name = passedName;
+  this.minNoOfCustomer = passedMin;
+  this.maxNoOfCustomer = passedMax;
+  this.avgNoOfCookiesPerCustomer = passedAvg;
+  this.results = [];
+  this.array = this.results.push(numberOfCookiesSoldPerHour(this.avgNoOfCookiesPerCustomer, this.minNoOfCustomer, this.maxNoOfCustomer)[0]);
+  this.total = this.results[1] = parseInt(numberOfCookiesSoldPerHour(this.avgNoOfCookiesPerCustomer, this.minNoOfCustomer, this.maxNoOfCustomer)[1])
+}
+
+//creating a seatlle object from constructor
+
+var seattle = new Location("seattle", 23, 65, 6.3);
+
 
 creatingUl(seattle);
 
@@ -50,15 +55,9 @@ body.append(tokyo);
 var ul = document.createElement("ul");
 body.append(ul);
 
-var tokyo = {
-  minNoOfCustomer: 3,
-  maxNoOfCustomer: 24,
-  avgNoOfCookiesPerCustomer: 1.2,
-  results: []
-}
-tokyo.results.push(numberOfCookiesSoldPerHour(tokyo.avgNoOfCookiesPerCustomer, tokyo.minNoOfCustomer, tokyo.maxNoOfCustomer)[0]);
-tokyo.results[1] = parseInt(numberOfCookiesSoldPerHour(tokyo.avgNoOfCookiesPerCustomer, tokyo.minNoOfCustomer, tokyo.maxNoOfCustomer)[1])
-// console.log(tokyo.results[0]);
+//creating a tokyo object from constructor
+
+var tokyo = new Location("tokyo", 3, 24, 1.2);
 
 creatingUl(tokyo);
 
@@ -70,15 +69,9 @@ body.append(dubai);
 var ul = document.createElement("ul");
 body.append(ul);
 
-var dubai = {
-  minNoOfCustomer: 11,
-  maxNoOfCustomer: 38,
-  avgNoOfCookiesPerCustomer: 3.7,
-  results: []
-}
-dubai.results.push(numberOfCookiesSoldPerHour(dubai.avgNoOfCookiesPerCustomer, dubai.minNoOfCustomer, dubai.maxNoOfCustomer)[0]);
-dubai.results[1] = parseInt(numberOfCookiesSoldPerHour(dubai.avgNoOfCookiesPerCustomer, dubai.minNoOfCustomer, dubai.maxNoOfCustomer)[1])
-// console.log(dubai.results[0]);
+//creating a dubai object from constructor
+
+var dubai = new Location("dubai", 11, 38, 3.7);
 
 creatingUl(dubai);
 
@@ -90,15 +83,9 @@ body.append(paris);
 var ul = document.createElement("ul");
 body.append(ul);
 
-var paris = {
-  minNoOfCustomer: 20,
-  maxNoOfCustomer: 38,
-  avgNoOfCookiesPerCustomer: 2.3,
-  results: []
-}
-paris.results.push(numberOfCookiesSoldPerHour(paris.avgNoOfCookiesPerCustomer, paris.minNoOfCustomer, paris.maxNoOfCustomer)[0]);
-paris.results[1] = parseInt(numberOfCookiesSoldPerHour(paris.avgNoOfCookiesPerCustomer, paris.minNoOfCustomer, paris.maxNoOfCustomer)[1])
-// console.log(paris.results[0]);
+//creating a paris object from constructor
+
+var paris = new Location("paris", 20, 38, 2.3);
 
 creatingUl(paris);
 
@@ -110,16 +97,9 @@ body.append(lima);
 var ul = document.createElement("ul");
 body.append(ul);
 
+//creating a lima object from constructor
 
-var lima = {
-  minNoOfCustomer: 2,
-  maxNoOfCustomer: 16,
-  avgNoOfCookiesPerCustomer: 4.6,
-  results: []
-}
-lima.results.push(numberOfCookiesSoldPerHour(lima.avgNoOfCookiesPerCustomer, lima.minNoOfCustomer, lima.maxNoOfCustomer)[0]);
-lima.results[1] = parseInt(numberOfCookiesSoldPerHour(lima.avgNoOfCookiesPerCustomer, lima.minNoOfCustomer, lima.maxNoOfCustomer)[1])
-// console.log(lima.results[0]);
+var lima = new Location("lima", 2, 16, 4.6);
 
 creatingUl(lima);
 
