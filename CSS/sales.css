@@ -1,6 +1,7 @@
 body {
   background-color: aqua;
   margin: 0;
+  text-align: center;
 }
 
 nav {
@@ -49,4 +50,8 @@ section {
 table, td, th {
   border: solid black 3px;
   border-collapse: collapse;
+  font-size: 20px;
+  /* Source used: https://www.granneman.com/webdev/coding/css/centertables */
+  margin-left:auto; 
+  margin-right:auto;
 }
