@@ -32,12 +32,31 @@ p {
   font-family: Arial, sans-serif;
 }
 
-section {
+.images div{
+  display: inline;
+}
+
+section div img {
+  width: 25%;
+  height: 300px;
+}
+
+.images div:nth-child(2) {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.images:last-child {
+  margin-bottom: 20px;
+}
+
+footer section{
   font-family: serif, Georgia;
   text-align: center;
   background-color: rgb(75, 74, 74);
   color: white;
 }
+
 
 #footer,
 .push {
